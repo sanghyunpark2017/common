@@ -1,11 +1,11 @@
 
 
-VMTOOS설치
+#VMTOOS설치
 
 yum -y install perl
 mkdir /mnt/cdrom
 
-VM->게스트->VMTOOLS설치 선택 
+#VM->게스트->VMTOOLS설치 선택 
 
 mount /dev/cdrom /mnt/cdrom
 ls /mnt/cdrom
@@ -18,7 +18,7 @@ cd vmware-tools-distrib
 ./vmware-install.pl
 
 
-맨 마지막 부분에 해당되는 아래 항목만 yes로 하고 나머지는 엔터
+#맨 마지막 부분에 해당되는 아래 항목만 yes로 하고 나머지는 엔터
 Would you like to enable VMware automatic kernel modules?
 [no] yes
 
@@ -26,24 +26,15 @@ rm /tmp/VMwareTools-10.0.9-3917699.tar.gz
 
 rm -rf /tmp/vmware-tools-distrib
 
-VM->설정편집->CDROM 클라이언트 디바이스로 변경
+#VM->설정편집->CDROM 클라이언트 디바이스로 변경
 
-
-
-ls 색상
+#ls 색상
 cat << EOF >> /root/.bashrc
 export LS_COLORS="di=00;36:fi=00;37"
 EOF
 
 
-
-cat << EOF >> /home/elasticsearch/.bashrc
-export LS_COLORS="di=00;36:fi=00;37"
-EOF
-
-
-
-파일백업 스크립트
+#파일백업 스크립트
 
 vi /sbin/bk
 #CP.ALL.ENABLE
@@ -61,11 +52,8 @@ done
 chmod 775 /sbin/bk
 
 
-시간동기화
+#시간동기화 NTP설정
 
-
-
-NTP설정
 sudo apt-get install ntp
 
 yum install ntp -y 
