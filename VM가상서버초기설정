@@ -110,6 +110,10 @@ vi /etc/sysconfig/network-scripts/ifcft-eth0
 
 systemctl restart network
 
+hostnamectl set-hostname 소문자
+
+vi /etc/hosts
+
 
 
 
