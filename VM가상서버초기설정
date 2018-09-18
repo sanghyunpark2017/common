@@ -72,17 +72,20 @@ ntpq -p
 
 
 ### Centos7 Grome 삭제
+## 그놈 윈도우 콘솔에 접속해서 해야함
 
 systemctl get-default
 >graphical.target
 
+
+#아래 명령어 오래 발생??
 systemctl list-units –type=target | grep multi-user.target
 >multi-user.target 있는지 확인
 
 systemctl set-default multi-user.target
 >multi-user.target 으로 설정
 
-systemctl get-defaul
+systemctl get-default
 >설정이 "multi-user.targe"으로 변경 되었는지 확인
 
 reboot
