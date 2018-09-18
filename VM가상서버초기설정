@@ -70,3 +70,38 @@ systemctl status ntpd
 
 ntpq -p
 
+
+### Centos7 Grome 삭제
+
+systemctl get-default
+>graphical.target
+
+systemctl list-units –type=target | grep multi-user.target
+>multi-user.target 있는지 확인
+
+systemctl set-default multi-user.target
+>multi-user.target 으로 설정
+
+systemctl get-defaul
+>설정이 "multi-user.targe"으로 변경 되었는지 확인
+
+reboot
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
