@@ -87,6 +87,9 @@ systemctl get-defaul
 
 reboot
 
+### 가상서버 IP주소 변경
+
+cd /etc/sysconfig/network-scripts
 
 
 
